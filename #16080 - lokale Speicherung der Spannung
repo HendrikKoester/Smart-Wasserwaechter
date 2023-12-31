@@ -1,4 +1,5 @@
 def Voltag_Speichern():
+    t=machine.RTC().datetime()
     dateispeicher=open('v_bat.txt', 'a')
     dateispeicher.write(str(t)+' ;'+str(sum(Voltage_Bat)/len(Voltage_Bat))+"\n")
     dateispeicher.close()
